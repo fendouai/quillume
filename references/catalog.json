@@ -1,0 +1,750 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "language": "en",
+  "angles": [
+    {
+      "id": "rewrite",
+      "name": "Clear rewrites",
+      "summary": "Keep the original point and qualifications while replacing clutter with a short, readable draft.",
+      "instructions": "Restate the core point in 1–3 clear sentences.",
+      "guidance": [
+        "Keep the main point within three sentences.",
+        "Retain the qualification that changes how the reader should interpret the claim.",
+        "Replace vague phrasing with a detail already present in the notes."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "expand",
+      "name": "Expanded posts",
+      "summary": "Develop a short note into a connected post, with enough context to explain the reasoning.",
+      "instructions": "Develop the core point in 5–8 sentences using details from the source.",
+      "guidance": [
+        "Give each sentence a different job: point, context, evidence, qualification or next step.",
+        "Develop only details the source provides.",
+        "Keep the final post to five to eight connected sentences."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "deep-dive",
+      "name": "Deep dives",
+      "summary": "Explore a decision and its implications in a substantial piece that keeps the evidence and limits visible.",
+      "instructions": "Write a substantial 180–260 word piece exploring the implications and a clear point of view.",
+      "guidance": [
+        "Choose one question worth examining in depth.",
+        "Separate what the notes establish from the interpretation you add.",
+        "Aim for 180–260 words; do not fill missing evidence with invented research."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "thread",
+      "name": "Social threads",
+      "summary": "Turn one source into a short sequence of posts, each making a useful contribution to the whole.",
+      "instructions": "Write 4–7 posts, each under 280 characters. Separate posts with a line containing ---.",
+      "guidance": [
+        "Give each post one point and keep it under 280 characters.",
+        "Use four to seven posts, separated by a line containing ---.",
+        "Keep caveats in the thread rather than saving them for an unrelated follow-up."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "contrast",
+      "name": "Before-and-after contrasts",
+      "summary": "Show how a generic claim becomes specific when it names the actual decision, process and boundaries.",
+      "instructions": "Contrast a generic version and a specific, concrete version of the same idea.",
+      "guidance": [
+        "Compare two ways of expressing the same underlying idea.",
+        "Label the generic wording as a writing example, not a competitor quote.",
+        "Make the specific version useful through evidence rather than a stronger unsupported promise."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "opinion",
+      "name": "Opinion posts",
+      "summary": "State an arguable position clearly and support it with the facts in the source, without manufacturing controversy.",
+      "instructions": "Write 3–6 sentences taking a clear, arguable position supported by the source.",
+      "guidance": [
+        "State the position before adding background.",
+        "Support it with a concrete reason rather than an insult or sweeping generalization.",
+        "Keep the strongest limitation in the three-to-six-sentence draft."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "story",
+      "name": "Short stories",
+      "summary": "Give supplied events a clear situation, tension and next step while keeping hypothetical scenes labeled.",
+      "instructions": "Write a 5–9 sentence story. Mark hypothetical scenes as hypothetical.",
+      "guidance": [
+        "Use only events, people and outcomes supplied in the notes.",
+        "Label invented teaching scenes as hypothetical.",
+        "Build a five-to-nine-sentence sequence without inventing a successful ending."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "explain",
+      "name": "Beginner explanations",
+      "summary": "Introduce an idea through three key points and a labeled analogy, with the depth adjusted to the reader.",
+      "instructions": "Explain the idea for a beginner with three key points and a useful analogy.",
+      "guidance": [
+        "Define any essential unfamiliar term before relying on it.",
+        "Organize the explanation around three distinct ideas.",
+        "Label the analogy and make clear where the real process has limits."
+      ],
+      "sourceRefs": [
+        "https://developers.google.com/tech-writing/one/audience"
+      ]
+    },
+    {
+      "id": "reply",
+      "name": "Useful replies",
+      "summary": "Respond to the actual point with a specific observation and a useful next step, without generic agreement.",
+      "instructions": "Write a concise, useful reply to the source text. Add a specific observation.",
+      "guidance": [
+        "Answer the point the source makes before introducing another topic.",
+        "Add one specific observation grounded in the supplied details.",
+        "Avoid invented familiarity, personal experience or a sales pitch."
+      ],
+      "sourceRefs": []
+    },
+    {
+      "id": "takeaways",
+      "name": "Numbered takeaways",
+      "summary": "Arrange the source into a short numbered list of concrete points the reader can scan and use.",
+      "instructions": "Turn the source into 3–5 concrete, numbered takeaways.",
+      "guidance": [
+        "Keep the list to three to five distinct items.",
+        "Start parallel items in a consistent way.",
+        "Include the condition or limitation that prevents the list from overstating the source."
+      ],
+      "sourceRefs": []
+    }
+  ],
+  "creators": [
+    {
+      "id": "indie-founder",
+      "name": "Independent SaaS founder",
+      "category": "Voice",
+      "summary": "An independent founder explaining product decisions and progress.",
+      "details": {
+        "positioning": "An independent founder explaining product decisions and progress.",
+        "expertise": "Product building and customer learning; only claim experience supported by the source.",
+        "tone": "Candid, practical and measured.",
+        "style": "Short paragraphs; explain the decision, tradeoff and next step. Use concrete verbs.",
+        "boundaries": "No invented revenue, customer quotes, guarantees or heroic founder stories."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "practical-advisor",
+      "name": "Practical advisor",
+      "category": "Voice",
+      "summary": "A consultant helping readers make a clear decision.",
+      "details": {
+        "positioning": "A consultant helping readers make a clear decision.",
+        "expertise": "The subject matter stated in the source; do not assume credentials.",
+        "tone": "Calm, direct and constructive.",
+        "style": "Lead with the recommendation; connect evidence to implications; use short parallel lists.",
+        "boundaries": "Avoid unsupported certainty and claims of professional certification."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "thoughtful-educator",
+      "name": "Thoughtful educator",
+      "category": "Voice",
+      "summary": "An educator making difficult ideas understandable.",
+      "details": {
+        "positioning": "An educator making difficult ideas understandable.",
+        "expertise": "Explain the source topic accurately at the reader’s level.",
+        "tone": "Patient, curious and respectful.",
+        "style": "Build one idea at a time, define essential terms and use clearly labeled illustrations.",
+        "boundaries": "No patronizing language, invented research or false simplification."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "product-explainer",
+      "name": "Product explainer",
+      "category": "Voice",
+      "summary": "A product writer describing how a feature helps a real task.",
+      "details": {
+        "positioning": "A product writer describing how a feature helps a real task.",
+        "expertise": "User workflows and product capabilities explicitly stated in the source.",
+        "tone": "Helpful, specific and restrained.",
+        "style": "Start with the user task; show the capability and limits; keep steps easy to scan.",
+        "boundaries": "Do not invent features, integrations, customer outcomes or superiority claims."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "evidence-led",
+      "name": "Evidence-led analyst",
+      "category": "Voice",
+      "summary": "An analyst separating observations from interpretations.",
+      "details": {
+        "positioning": "An analyst separating observations from interpretations.",
+        "expertise": "Only the data and context provided in the source.",
+        "tone": "Precise, balanced and clear.",
+        "style": "Use finding, evidence, implication and limitation; preserve units and qualifications.",
+        "boundaries": "No fabricated statistics, causal claims, forecasts or external citations."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "warm-editor",
+      "name": "Warm professional",
+      "category": "Voice",
+      "summary": "A professional who values clarity and considerate communication.",
+      "details": {
+        "positioning": "A professional who values clarity and considerate communication.",
+        "expertise": "The source’s subject without implying additional credentials.",
+        "tone": "Warm, confident and unforced.",
+        "style": "Natural sentences, concrete wording and direct requests; avoid unnecessary formality.",
+        "boundaries": "No exaggerated enthusiasm, manipulation, fake intimacy or unsupported promises."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/voice-and-tone/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "technical-writer",
+      "name": "Technical writer",
+      "category": "Voice",
+      "summary": "Explain prerequisites, actions and observable results for a specific technical task.",
+      "details": {
+        "positioning": "A documentation writer helping a reader complete a defined technical task.",
+        "expertise": "Only the prerequisites, behavior and terminology established in the supplied notes.",
+        "tone": "Exact, composed and approachable.",
+        "style": "Identify prerequisites, explain the ordered actions and describe the observable result. Define terms according to the reader’s knowledge.",
+        "boundaries": "Do not invent commands, API parameters, permissions, compatibility, security guarantees or successful test results."
+      },
+      "sourceRefs": [
+        "https://developers.google.com/tech-writing/one/audience"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "content-marketer",
+      "name": "Content marketer",
+      "category": "Voice",
+      "summary": "Connect a reader’s task to a supported benefit and a clear next step.",
+      "details": {
+        "positioning": "A content writer connecting a stated audience problem to a supported product or service benefit.",
+        "expertise": "The offer, audience context and evidence present in the source; brand examples guide wording only.",
+        "tone": "Purposeful, clear and credible.",
+        "style": "Connect the reader’s task to a concrete benefit, show the supplied evidence or mechanism, then offer an appropriate next step. Keep brand language consistent.",
+        "boundaries": "No invented ROI, testimonials, customer counts, competitor comparisons, scarcity or outcome guarantees."
+      },
+      "sourceRefs": [
+        "https://www.copy.ai/platform/brand-voice",
+        "https://help.jasper.ai/hc/en-us/articles/55085106001051-Brand-Voice"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "newsletter-editor",
+      "name": "Newsletter editor",
+      "category": "Voice",
+      "summary": "Shape a purposeful update with a clear reading order and a relevant next action.",
+      "details": {
+        "positioning": "An editor turning supplied material into a focused update for a defined readership.",
+        "expertise": "The events, links, product notes and dates explicitly provided in the source.",
+        "tone": "Engaging, selective and considerate of the reader’s time.",
+        "style": "State why this update matters, arrange a few short sections around that purpose and finish with one relevant next action.",
+        "boundaries": "Do not invent news, publication dates, quotes, event details or a prior relationship with subscribers."
+      },
+      "sourceRefs": [
+        "https://styleguide.mailchimp.com/writing-email-newsletters/"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "customer-success-writer",
+      "name": "Customer success writer",
+      "category": "Voice",
+      "summary": "Acknowledge the situation and explain a useful next action without promising an unverified fix.",
+      "details": {
+        "positioning": "A support and onboarding writer helping someone continue a real workflow.",
+        "expertise": "The customer’s stated context and the verified product behavior in the source.",
+        "tone": "Attentive, calm and straightforward.",
+        "style": "Acknowledge the specific situation, give the next useful action and explain what is known or still being checked. Adjust detail to the reader’s familiarity.",
+        "boundaries": "Do not claim an issue is fixed, promise an unconfirmed deadline, invent account details or ask for passwords or secret keys."
+      },
+      "sourceRefs": [
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/",
+        "https://www.intercom.com/help/en/articles/198-our-best-practice-guide-to-customer-support"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    }
+  ],
+  "readers": [
+    {
+      "id": "busy-founder",
+      "name": "Busy SaaS founder",
+      "category": "Audience",
+      "summary": "An independent founder balancing product work and customer communication. This is a hypothetical starting profile.",
+      "details": {
+        "description": "An independent founder balancing product work and customer communication. This is a hypothetical starting profile.",
+        "painPoints": "Limited time and competing priorities; needs useful distinctions quickly.",
+        "goals": "Understand the decision, tradeoffs and a practical next action.",
+        "contentPreferences": "Lead with the point; concise examples and clearly stated assumptions."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "new-reader",
+      "name": "Curious beginner",
+      "category": "Audience",
+      "summary": "A reader who is interested but new to the topic; do not assume age or profession.",
+      "details": {
+        "description": "A reader who is interested but new to the topic; do not assume age or profession.",
+        "painPoints": "Unexplained terminology and missing context.",
+        "goals": "Understand the idea and how the pieces fit together.",
+        "contentPreferences": "Plain English, brief definitions, gradual explanation and labeled analogies."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "experienced-reader",
+      "name": "Experienced practitioner",
+      "category": "Audience",
+      "summary": "A reader familiar with the source’s domain; expertise is a working assumption to edit.",
+      "details": {
+        "description": "A reader familiar with the source’s domain; expertise is a working assumption to edit.",
+        "painPoints": "Generic advice, excessive background and unsupported certainty.",
+        "goals": "Assess the reasoning, constraints and applicability.",
+        "contentPreferences": "Precise terminology, useful detail, tradeoffs and explicit limitations."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "decision-maker",
+      "name": "Product decision maker",
+      "category": "Audience",
+      "summary": "A product lead comparing approaches to a stated user problem.",
+      "details": {
+        "description": "A product lead comparing approaches to a stated user problem.",
+        "painPoints": "Unclear outcomes, missing assumptions and vague recommendations.",
+        "goals": "Choose a reasonable next step and understand what evidence is missing.",
+        "contentPreferences": "Decision-first structure, options, risks and concrete next steps."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "client-reader",
+      "name": "Prospective service client",
+      "category": "Audience",
+      "summary": "A potential client evaluating a service described in the source; buying intent is not established.",
+      "details": {
+        "description": "A potential client evaluating a service described in the source; buying intent is not established.",
+        "painPoints": "Jargon, unclear scope and promises without support.",
+        "goals": "Understand the service, suitability and what happens next.",
+        "contentPreferences": "Plain scope, concrete process, transparent limits and low-pressure language."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "time-poor-reader",
+      "name": "Time-poor professional",
+      "category": "Audience",
+      "summary": "A professional reading between other tasks, often on a phone.",
+      "details": {
+        "description": "A professional reading between other tasks, often on a phone.",
+        "painPoints": "Long introductions and dense paragraphs.",
+        "goals": "Find the essential information and any action required.",
+        "contentPreferences": "Brief paragraphs, clear headings, one main point and a specific request where supported."
+      },
+      "sourceRefs": [
+        "https://offers.hubspot.com/view/persona-templates"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "technical-evaluator",
+      "name": "Technical evaluator",
+      "category": "Audience",
+      "summary": "Assess supported behavior, prerequisites and the evidence needed for a technical decision.",
+      "details": {
+        "description": "A reader assessing whether the described workflow fits stated technical requirements; this is an editable task profile.",
+        "painPoints": "Missing prerequisites, vague capability claims and undocumented limits.",
+        "goals": "Identify supported behavior, dependencies, evidence and the checks needed before adopting an approach.",
+        "contentPreferences": "Concrete requirements, precise terms, reproducible evaluation steps and explicit unknowns."
+      },
+      "sourceRefs": [
+        "https://developers.google.com/tech-writing/one/audience"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "existing-customer",
+      "name": "Existing customer",
+      "category": "Audience",
+      "summary": "Continue a current task with specific instructions, known limits and a useful follow-up.",
+      "details": {
+        "description": "A current user trying to continue a workflow, understand a change or resolve a specific issue; no account history is assumed.",
+        "painPoints": "Generic replies, repeated background and unclear instructions about what to do next.",
+        "goals": "Understand what the supplied information means for the current task and what action is available.",
+        "contentPreferences": "Situation-specific guidance, a small number of steps, known limits and a clear way to follow up."
+      },
+      "sourceRefs": [
+        "https://www.intercom.com/help/en/articles/198-our-best-practice-guide-to-customer-support"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "marketing-team",
+      "name": "Marketing team",
+      "category": "Audience",
+      "summary": "Align audience, message, evidence and review responsibilities for a content workflow.",
+      "details": {
+        "description": "A team preparing content for a stated campaign and audience; channels, resources and performance are not assumed.",
+        "painPoints": "Inconsistent claims across drafts, unclear audience context and missing review ownership.",
+        "goals": "Align the message, supporting evidence, intended reader and next action before publishing.",
+        "contentPreferences": "Reusable briefs, clearly separated claims and proof, channel constraints and practical review checks."
+      },
+      "sourceRefs": [
+        "https://www.copy.ai/platform/brand-voice",
+        "https://help.jasper.ai/hc/en-us/articles/36829917506203-Audiences"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "executive-stakeholder",
+      "name": "Executive stakeholder",
+      "category": "Audience",
+      "summary": "Understand the proposed decision, evidence, tradeoffs and next accountable step.",
+      "details": {
+        "description": "A stakeholder reviewing a proposed decision and its business implications; budget authority and approval are not assumed.",
+        "painPoints": "Operational detail without a decision, unexplained tradeoffs and confident claims without evidence.",
+        "goals": "Understand the decision needed, supported implications, unresolved risks and the next accountable step.",
+        "contentPreferences": "A concise decision summary, relevant evidence, alternatives and clear ownership where known."
+      },
+      "sourceRefs": [
+        "https://help.jasper.ai/hc/en-us/articles/36829917506203-Audiences",
+        "https://www.hubspot.com/make-my-persona/user-persona-template"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    }
+  ],
+  "prompts": [
+    {
+      "id": "clear-rewrite",
+      "name": "Clear, faithful rewrite",
+      "category": "Clarity",
+      "summary": "Rewrite the source in clear, natural English.",
+      "instructions": "Rewrite the source in clear, natural English. Keep its meaning, factual claims, uncertainty and point of view. Replace vague phrasing with specifics already present in the source; never supply missing facts. Use direct verbs and remove repetition. Keep the result close to the original length. Return only the edited text.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "concise-rewrite",
+      "name": "Cut the clutter",
+      "category": "Clarity",
+      "summary": "Shorten the source by roughly one third where possible without removing essential qualifications, decisions or evidence.",
+      "instructions": "Shorten the source by roughly one third where possible without removing essential qualifications, decisions or evidence. Prefer direct verbs, remove repeated ideas and unnecessary introductions, and preserve the author’s position. If the source is already concise, make only useful edits. Return only the revised text.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "voice-match",
+      "name": "Match my creator voice",
+      "category": "Voice",
+      "summary": "Rewrite the source using the selected creator’s tone, sentence rhythm, preferred structure and boundaries.",
+      "instructions": "Rewrite the source using the selected creator’s tone, sentence rhythm, preferred structure and boundaries. Use voice samples as style examples, never as evidence for claims. Preserve the source’s intent and uncertainty. Avoid copying sample passages. If no creator is selected, use a plain, thoughtful voice. Return only the revised text.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "beginner-friendly",
+      "name": "Explain for a beginner",
+      "category": "Audience",
+      "summary": "Rewrite for a reader who is new to the topic.",
+      "instructions": "Rewrite for a reader who is new to the topic. Introduce the main idea first, define essential terms briefly, then explain the steps or implications. Use one clearly labeled analogy only if it helps. Retain caveats and avoid patronizing the reader. Use reader context when selected. Do not invent examples presented as real events.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "expert-brief",
+      "name": "Write an expert brief",
+      "category": "Audience",
+      "summary": "Turn the source into a concise brief for an experienced reader.",
+      "instructions": "Turn the source into a concise brief for an experienced reader. Lead with the finding or decision explicitly stated in the source, then provide its supporting details and limitations. Retain precise domain terms. Distinguish stated facts from unresolved questions. Do not infer product input restrictions, motives, or unmentioned plans from output format or reader preferences. Do not invent assumptions. If the source does not support a recommendation, state what evidence is missing.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "founder-update",
+      "name": "Shape a founder update",
+      "category": "SaaS",
+      "summary": "Organize the source as a founder update with short sections: What changed, Why it matters, and What comes next.",
+      "instructions": "Organize the source as a founder update with short sections: What changed, Why it matters, and What comes next. Include only sections supported by the source. Keep an accountable, specific voice. Preserve actual constraints and unresolved questions. Do not invent growth metrics, customer reactions or commitments. Return an editable update, not a marketing pitch.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "source-story",
+      "name": "Tell a grounded story",
+      "category": "Structure",
+      "summary": "Reshape the source into a short narrative: the situation, the tension, the change and the takeaway.",
+      "instructions": "Reshape the source into a short narrative: the situation, the tension, the change and the takeaway. Use only people, events and outcomes stated in the source. If no real event is described, present the explanation as an illustration and label it hypothetical. Keep the narrator consistent with the selected creator. Do not invent personal experiences or quotes.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "balanced-argument",
+      "name": "Build a balanced argument",
+      "category": "Structure",
+      "summary": "State the source’s main position clearly, organize its supporting reasons, and preserve its strongest qualification or counterpoint.",
+      "instructions": "State the source’s main position clearly, organize its supporting reasons, and preserve its strongest qualification or counterpoint. Distinguish facts, interpretation and recommendation. Do not manufacture evidence or arguments absent from the source. End with a practical conclusion only when supported. Keep the author’s position rather than making it more extreme.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "scannable",
+      "name": "Make it easy to scan",
+      "category": "Structure",
+      "summary": "Rewrite for scanning on a phone.",
+      "instructions": "Rewrite for scanning on a phone. Lead with the main point, use short paragraphs, and add descriptive headings only where needed. Turn parallel items into a small list. Preserve logical connections, important details and caveats. Avoid excessive headings, emojis or generic motivational lines. Return only the revised text.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "reader-adaptation",
+      "name": "Adapt for this reader",
+      "category": "Audience",
+      "summary": "Rewrite the source for the selected reader’s background, goals and content preferences.",
+      "instructions": "Rewrite the source for the selected reader’s background, goals and content preferences. Change explanation depth, vocabulary and emphasis without changing the underlying facts. Address relevant stated pain points without assuming every reader shares them. Do not invent demographic details or buying intent. If no reader is selected, write for a general professional audience.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "professional-email",
+      "name": "Turn notes into an email",
+      "category": "Format",
+      "summary": "Turn the source into a professional email with a specific subject and concise body.",
+      "instructions": "Turn the source into a professional email with a specific subject and concise body. State the purpose early. Separate context from the requested action, and retain any actual deadline or owner. Do not invent a deadline, promise, recipient relationship or attachment. Match the selected creator and reader. Return the subject and body.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    },
+    {
+      "id": "claim-aware",
+      "name": "Review and rewrite carefully",
+      "category": "Review",
+      "summary": "First provide a revised version that preserves only source-supported claims.",
+      "instructions": "First provide a revised version that preserves only source-supported claims. Then list at most three material ambiguities or unsupported claims actually present in the source. Do not manufacture ambiguity or ask the author to confirm facts already stated clearly. If there is nothing material to check, say so briefly. Keep uncertainty visible; do not claim external fact-checking, originality, or AI detection scores. Preserve the selected creator’s style without compromising accuracy.",
+      "sourceRefs": [
+        "https://github.com/f/prompts.chat"
+      ],
+      "provenance": "Original WarmQuant editorial template; linked sources describe related frameworks and are not redistributed."
+    }
+  ],
+  "styles": [
+    {
+      "id": "plain",
+      "name": "Plain & clear",
+      "summary": "Straightforward wording without filler.",
+      "instructions": "Use clear, everyday words, direct sentences and concrete details from the source. Keep qualifications visible and remove filler.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "professional",
+      "name": "Professional",
+      "summary": "Polished, respectful and focused on the work.",
+      "instructions": "Use a polished, respectful professional tone. State the point clearly, organize supporting details and avoid slang, inflated language or unsupported certainty.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "conversational",
+      "name": "Conversational",
+      "summary": "Natural language with an easy reading rhythm.",
+      "instructions": "Write as a thoughtful conversation. Use natural phrasing, contractions where appropriate and varied sentence length. Avoid forced familiarity and keep every claim grounded.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "concise",
+      "name": "Concise & direct",
+      "summary": "The essential point, context and next step.",
+      "instructions": "Lead with the essential point. Use short sentences and brief paragraphs; cut repeated background while preserving evidence, qualifications and any supported next step.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "formal",
+      "name": "Formal",
+      "summary": "Measured language for structured communication.",
+      "instructions": "Use measured, formal language and complete sentences. Prefer precise terms over conversational expressions. Preserve the source's uncertainty and avoid claiming authority or credentials.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "empathetic",
+      "name": "Warm & empathetic",
+      "summary": "Considerate wording with specific help.",
+      "instructions": "Use a warm, considerate tone that acknowledges the situation described in the source. Offer a clear next step when supported. Avoid blame, assumed emotions and promises the source cannot support.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "confident",
+      "name": "Confident & grounded",
+      "summary": "A clear position supported by the supplied facts.",
+      "instructions": "State the source-supported position with confidence and explain its reason. Use active language without exaggerating evidence, erasing uncertainty or inventing personal expertise.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "analytical",
+      "name": "Analytical",
+      "summary": "Evidence, reasoning and limitations in order.",
+      "instructions": "Separate observations, interpretation and recommendation. Use precise wording and explicit logical connections. Preserve units and limitations; never invent statistics or research.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "enthusiastic",
+      "name": "Upbeat & encouraging",
+      "summary": "Positive energy without hype.",
+      "instructions": "Use an upbeat, encouraging tone and active verbs. Keep enthusiasm proportionate to the source. Avoid exaggerated punctuation, invented success, urgency and guaranteed outcomes.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    },
+    {
+      "id": "playful",
+      "name": "Lightly playful",
+      "summary": "A little personality while keeping the point clear.",
+      "instructions": "Use a light, friendly touch and restrained wordplay when the subject allows it. Keep the meaning clear, treat the reader respectfully and avoid jokes about sensitive circumstances or invented events.",
+      "sourceRefs": [
+        "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+        "https://developers.google.com/tech-writing/one/audience",
+        "https://www.intercom.com/blog/preach-framework-for-customer-support-tone/"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "humanize",
+      "name": "Plain-language edit",
+      "instructions": "Rewrite plainly and naturally. Remove clichés and filler; preserve facts and meaning."
+    },
+    {
+      "id": "titles",
+      "name": "Title ideas",
+      "instructions": "Generate 10 English title candidates. Explain each hook briefly. Avoid unsupported claims."
+    },
+    {
+      "id": "check",
+      "name": "Writing review",
+      "instructions": "Review clarity, factual support, specificity, tone, repetition and unsupported claims. Give actionable edits. Do not claim to determine AI authorship."
+    },
+    {
+      "id": "x",
+      "name": "X thread",
+      "instructions": "Adapt into an X thread with posts under 280 characters separated by ---."
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit post",
+      "instructions": "Adapt into a useful Reddit post with a title, context and concrete detail. Avoid promotion."
+    },
+    {
+      "id": "quora",
+      "name": "Quora answer",
+      "instructions": "Adapt into a direct, helpful Quora answer."
+    },
+    {
+      "id": "blog",
+      "name": "Blog article",
+      "instructions": "Adapt into a blog article with a title, introduction and clear sections."
+    }
+  ]
+}

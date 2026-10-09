@@ -1,0 +1,5 @@
+Fictional teaching source:
+We reduced an internal weekly reporting workflow from five steps to three.
+The team checked one workflow, not every reporting task.
+Customer time savings have not been measured.
+The next step is to test the remaining workflows before making a wider claim.

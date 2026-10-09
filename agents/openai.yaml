@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quillume — by WarmQuant"
+  short_description: "Source-grounded writing with voice and reader presets"
+  default_prompt: "Use $quillume to turn my notes into a clear English draft for my reader."

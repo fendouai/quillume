@@ -1,0 +1,25 @@
+{
+  "angle": "expand",
+  "creator": {
+    "name": "My practical voice",
+    "details": {
+      "positioning": "Explain a source-supported operational change.",
+      "tone": "Calm and specific.",
+      "boundaries": "Do not invent customer results, job titles or first-person experience."
+    }
+  },
+  "reader": {
+    "name": "An operations reader",
+    "details": {
+      "description": "A hypothetical reader comparing reporting workflows.",
+      "goals": "Understand the change, the evidence and the next decision.",
+      "contentPreferences": "Lead with the change and keep its measurement limits visible."
+    }
+  },
+  "style": {
+    "name": "Measured brevity",
+    "instructions": "Use direct sentences with no hype. Preserve the measurement caveat."
+  },
+  "prompt": "claim-aware",
+  "requirements": "Write one paragraph of about 80 words. Keep the hypothetical status explicit."
+}
