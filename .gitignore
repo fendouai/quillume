@@ -16,3 +16,10 @@ __pycache__/
 config.local.*
 notes.local.*
 output.local.*
+.cache/
+.pytest_cache/
+logs/
+*.log
+*.bak
+*.pfx
+.omx/

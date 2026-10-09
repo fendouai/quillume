@@ -1,98 +1,195 @@
-# Quillume — by WarmQuant
+<div align="center">
 
-*Your ideas. Your voice. A little more light.*
+![Quillume — your ideas, your voice, a little more light](docs/images/intro.svg)
 
-Turn original notes into clear English drafts, with a writing angle, an author voice, a reader profile and an editable style.
+# Quillume
 
-This is a standalone [Agent Skill](https://agentskills.io/specification). It uses the language model in your existing agent host. The optional Python helper lists presets and constructs prompts offline; it does not generate text or contact a service. No separate WarmQuant account or API key is required. Your host's model limits and data policies still apply.
+**Turn rough notes into clear English—with your voice and your facts intact.**
 
-## Included
+An open-source writing skill for your existing agent. Built by **WarmQuant**.
 
-| Collection | Presets |
-| --- | ---: |
-| Writing angles | 10 |
-| Creator voices | 10 |
-| Reader profiles | 10 |
-| Voice and style | 10 |
-| Editing methods | 12 |
-| Refinement tools | 7 |
+**59 editable presets · 1,000 core combinations · Offline Python helper · MIT**
 
-Choose any angle, creator and reader: 1,000 core combinations are available from one shared catalog. Styles can accompany any combination. Every collection supports custom instructions or profiles. Profiles are editable hypothetical templates, not claims about you or researched customers.
+[Get started](#get-started) · [See it in action](#see-it-in-action) · [Explore presets](references/presets.md) · [Customize](references/customization.md)
 
-## Install
+</div>
 
-Download or clone this repository into a folder named `quillume`. Copy the whole folder to the skill-discovery directory supported by your agent host. Keep `SKILL.md`, `scripts/`, `references/`, and `agents/` together. There is no install script that changes your environment.
+## Good ideas deserve a better draft
 
-For Codex, a user-level installation can be made by copying the folder into `~/.codex/skills/quillume`. Restart or reload your host's skill catalog if needed. Other hosts should use their own documented skill location; folder discovery and invocation syntax vary. `agents/openai.yaml` is optional Codex UI metadata, while `SKILL.md` is the portable entrypoint.
+You have the notes. You know what happened. Quillume helps you find the angle, write for the reader, and turn those fragments into something worth reading.
 
-## Use with an agent
+Use it for a founder update, a beginner explanation, a thoughtful reply, a thread, or a longer article. Choose a voice and style when they help—or simply ask for a clearer rewrite. The skill guides your host agent to preserve numbers, names, qualifications, and the limits of your evidence.
+
+**Bring the source. Choose the direction. Let your agent write.**
+
+## See it in action
+
+**Your notes**
+
+> We moved the internal reporting process from five steps to three. We tested one workflow. We have not measured customer time savings.
+
+**Your request**
+
+```text
+Use $quillume to make these notes clearer.
+Keep it to two sentences, in plain English.
+```
+
+**Illustrative draft**
+
+> In one tested internal workflow, reporting now takes three steps instead of five. Customer time savings have not yet been measured.
+
+The useful detail survives: the actual change, the single-workflow scope, and the unmeasured outcome. This is a fictional editorial example, not a customer result or a model benchmark. See the [expanded example](examples/draft.md) and [worked examples](references/examples.md).
+
+## Get started
+
+### 1. Install the skill
+
+Download or clone this repository into a folder named `quillume`. Copy the whole folder to your agent host's skill directory, keeping `SKILL.md`, `references/`, `scripts/`, and `agents/` together.
+
+For Codex, run this from the repository root:
+
+```sh
+mkdir -p ~/.codex/skills
+# Use a fresh destination; move an existing installation aside before copying.
+mkdir ~/.codex/skills/quillume
+cp -R SKILL.md LICENSE agents references scripts ~/.codex/skills/quillume/
+```
+
+Reload your host's skill catalog or restart it if needed. Other hosts use their own skill locations and invocation syntax. `SKILL.md` is the portable entrypoint; `agents/openai.yaml` provides optional Codex UI metadata.
+
+### 2. Give it your notes
 
 In Codex:
 
 ```text
-Use $quillume to expand these notes for busy founders.
-Use a candid founder voice and the Professional style.
+Use $quillume to expand these notes into a short update for busy founders.
+Use the indie-founder voice, Professional style, and claim-aware editing.
 
-Source: We reduced the internal weekly reporting workflow from five steps to three.
+Source:
+We reduced the internal weekly reporting workflow from five steps to three.
 We checked one workflow. Customer time savings have not been measured.
 ```
 
-Or ask for a concise rewrite without choosing profiles. The skill defaults to plain language and does not invent an author identity or audience. Drafts are English. It retains source qualifications and reviews unsupported claims before delivery.
+You can also ask for a rewrite without selecting presets. Defaults are **clear rewrite + plain language**, with no assumed author identity or audience. Drafts are English; setup discussion can use your language.
 
-The source above is a fictional example, not a WarmQuant result or customer testimonial.
+### 3. Review and use the draft
 
-## Optional offline helper
+Check it against your source before sharing. Quillume instructs the agent to review factual fidelity, but results depend on your host model. Saving or publishing content remains a separate action you request.
 
-Python 3.10+ is sufficient; there are no pip packages to install. Run these from the repository root:
+## Your writing, with more range
+
+![Six customizable preset collections](docs/images/features.svg)
+
+| Collection | Count | What it changes |
+| --- | ---: | --- |
+| Writing angles | 10 | The shape: rewrite, deep dive, story, explanation, reply, thread |
+| Creator voices | 10 | The editorial perspective and tone |
+| Reader profiles | 10 | The depth, context, and emphasis for the intended reader |
+| Voice & style | 10 | The rhythm: plain, professional, concise, warm, analytical |
+| Editing methods | 12 | The treatment: cut clutter, match voice, review claims |
+| Refinement tools | 7 | The next task: titles, writing review, or format adaptation |
+
+**10 angles × 10 voices × 10 readers = 1,000 core combinations.** Styles and editing methods can accompany these combinations. A refinement tool performs its selected task instead of also producing the angle's format.
+
+Every collection supports custom instructions or profiles. Creator voices describe editorial stances; reader profiles are editable hypotheses. They do not supply real credentials, experience, or customer research.
+
+Browse the [full preset guide](references/presets.md), or inspect just what you need:
 
 ```sh
 python3 scripts/quillume.py list --kind style
 python3 scripts/quillume.py show creator indie-founder
+python3 scripts/quillume.py show reader busy-founder
+```
+
+## How it works
+
+![Source, setup, draft, review, and delivery](docs/images/workflow.svg)
+
+Quillume runs as instructions inside your existing agent. Your host supplies the model; the skill supplies the editorial setup and review process. No separate WarmQuant account or API key is required. Your host's model limits, costs, and data policies still apply.
+
+![Quillume architecture: host generation and offline prompt composition](docs/images/architecture.svg)
+
+The optional Python helper is a local utility, not a text-generation service. It reads the shared catalog and your supplied source, then prints a provider-neutral JSON message bundle. It does not contact a service, read environment credentials, fetch links, or save drafts.
+
+## Optional: compose prompts offline
+
+**Python 3.10+ · Standard library only · No packages to install**
+
+Run from the repository root:
+
+```sh
+# Build a message bundle from the included fictional notes.
 python3 scripts/quillume.py compose --source examples/notes.txt \
   --angle expand --creator indie-founder --reader busy-founder \
   --style professional --prompt claim-aware
+
+# Use your own editorial setup.
 python3 scripts/quillume.py compose --source examples/notes.txt \
   --config examples/custom-setup.json
+
+# Ask for a writing review instead of a new draft.
 python3 scripts/quillume.py compose --source examples/notes.txt --tool check
+
+# Or pipe source text through stdin.
+printf '%s\n' 'One workflow changed. Customer savings are unmeasured.' \
+  | python3 scripts/quillume.py compose --style concise
 ```
 
-`compose` prints a provider-neutral JSON message bundle to stdout. Ask your current agent to execute the writing task, or pass the bundle to a model through your own integration. Source text can also be piped to stdin. The helper never reads environment credentials, fetches links, executes preset text or saves a draft. Its output contains your supplied source and configuration, so handle it as carefully as those inputs.
+Ask your current agent to carry out the resulting writing task, or pass the bundle to a model through your own integration. The printed bundle contains your source and configuration; handle it as carefully as the input.
 
-CLI options override matching fields in a custom setup. Defaults are `rewrite` and `plain`; creator, reader, editing method and refinement tool are optional. Use `none` to clear an optional selection. When a refinement tool is chosen, it performs that operation on the source rather than also generating the angle's format.
+CLI choices override matching custom-setup fields. Use `none` to clear an optional creator, reader, editing method, or tool. Source input is limited to 20,000 characters.
 
-## Customize and extend
+## Make it yours
 
-[Customization](references/customization.md) explains preset IDs, custom objects and supported fields. Add original entries to [the catalog](references/catalog.json) to expand the library; there is no hard-coded cap on collection size. Keep `rewrite` and `plain` as default IDs, or update the defaults and their documentation together. The helper picks up new entries without route generation or a build step.
+Start with [the custom setup example](examples/custom-setup.json). You can replace any preset with original instructions, supply voice samples, or describe a reader in your own terms.
 
-Examples and case-review guidance are in [references/examples.md](references/examples.md); [a complete fictional draft](examples/draft.md) demonstrates the source in `examples/notes.txt`. Only supplied text is used as factual evidence. Voice samples guide expression, not factual claims. The skill does not claim to bypass AI detectors, determine authorship, research an audience automatically or publish on your behalf.
+To extend the shared library, add entries to [references/catalog.json](references/catalog.json). The helper discovers new entries without a build step. Keep `rewrite` and `plain` as default IDs, or update the defaults and documentation together.
 
-## Validate
+Read [the customization guide](references/customization.md) for supported fields and validation rules. Voice samples guide expression; their factual claims are not treated as evidence for your draft.
+
+## Built for source-grounded writing
+
+- **Facts first.** Instructions preserve quantities and qualifications and check for unsupported additions.
+- **Flexible voice.** Profiles adjust expression without inventing an identity or experience.
+- **Small setup.** Use only the choices that improve the current task.
+- **Local helper.** Prompt composition works offline with no runtime dependencies beyond Python.
+- **Portable files.** Plain Markdown, JSON, and Python you can inspect and edit.
+
+Quillume does not research an audience automatically, determine AI authorship, promise detector evasion, or publish on your behalf. Review drafts in your host before using them.
+
+## Validate and contribute
 
 ```sh
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 ```
 
-The validator checks skill structure, links, catalog consistency and accidental inclusion of credential patterns or private deployment artifacts. Tests cover prompt composition, custom fields, CLI behavior, all preset combinations and extension behavior. They do not prove that every model will preserve facts or follow safety instructions; review generated drafts in your host.
+Validation checks skill structure, local documentation links, catalog consistency, common credential patterns, and private runtime artifacts. The 16 unit/CLI tests cover composition, customization, input handling, all 1,000 core combinations, and catalog extension. These checks validate the toolkit; they are not a benchmark of model writing quality.
 
-Local verification on 2026-10-09: the Skill Creator format check, publication hygiene validation and 16 unit/CLI checks passed. The checks exercise all 1,000 core combinations and an added creator preset. Python 3.10 syntax compatibility was checked; a multi-host model benchmark was not performed.
-
-GitHub Actions is configured to run validation and tests with Python 3.10 and 3.13 after you publish the repository; that remote workflow has not run yet.
-
-## Repository layout
+GitHub Actions is configured to run validation and tests on Python 3.10 and 3.13. When contributing a preset, keep it original, source-grounded, and useful for a specific editorial task. Update the guide when adding a collection entry, and run both checks.
 
 ```text
-SKILL.md                  Portable agent instructions
-agents/openai.yaml        Optional Codex presentation metadata
-references/catalog.json   Maintained public presets
-references/*.md           On-demand selection, customization and sources
-scripts/quillume.py      Offline discovery and prompt composition
-scripts/validate.py       Structure and publication hygiene checks
-tests/                    Dependency-free behavioral tests
-examples/                 Fictional notes and custom setup
-LICENSE                   MIT
+quillume/
+├── SKILL.md                  Portable writing instructions
+├── agents/openai.yaml        Optional Codex UI metadata
+├── references/               Presets, customization, examples, sources
+│   └── catalog.json          Shared preset library
+├── scripts/                  Offline helper and publication validator
+├── tests/                    Dependency-free behavioral tests
+├── examples/                 Fictional source, draft, and custom setup
+├── docs/images/              Editable README illustrations
+└── LICENSE                   MIT license
 ```
 
-## License and sources
+## License and attribution
 
-The code and original editorial templates in this repository are available under the [MIT License](LICENSE). External framework references are listed in [references/sources.md](references/sources.md); linked publications are not included or relicensed. Reference links do not imply endorsement. This repository has no SaaS billing, authentication, deployment configuration, user database, analytics or referral-signature logic.
+The code and original editorial templates are [MIT licensed](LICENSE). External framework references are listed in [sources](references/sources.md); linked publications are not included or relicensed, and links do not imply endorsement.
+
+<div align="center">
+
+**Your ideas. Your voice. A little more light.**
+
+Quillume by WarmQuant
+
+</div>

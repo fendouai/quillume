@@ -32,11 +32,11 @@ def validate(root=ROOT):
     for required in ["LICENSE", "README.md", "agents/openai.yaml", "references/catalog.json", "scripts/quillume.py"]:
         if not (root / required).is_file():
             errors.append("Missing " + required)
-    secrets = re.compile(r"(?<![A-Za-z0-9_])(?:GOCSPX-[A-Za-z0-9_-]{12,}|sk-[A-Za-z0-9_-]{20,}|creem_[A-Za-z0-9]{12,}|re_[A-Za-z0-9_]{25,})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
-    forbidden_dirs = {".deploy", ".secrets", ".ssh", ".venv", "node_modules", ".next", "backups"}
+    secrets = re.compile(r"(?<![A-Za-z0-9_])(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16}|GOCSPX-[A-Za-z0-9_-]{12,}|sk-[A-Za-z0-9_-]{20,}|creem_[A-Za-z0-9]{12,}|re_[A-Za-z0-9_]{25,})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
+    forbidden_dirs = {".deploy", ".secrets", ".ssh", ".venv", "node_modules", ".next", "backups", ".cache", ".pytest_cache", "logs"}
     for path in root.rglob("*"):
         relative = path.relative_to(root)
-        if set(relative.parts) & {".git", "__pycache__"}:
+        if set(relative.parts) & {".git", ".omx", "__pycache__"}:
             continue
         if path.is_symlink():
             errors.append("Do not ship symlinks: " + str(relative)); continue
@@ -44,7 +44,7 @@ def validate(root=ROOT):
             errors.append("Private/runtime artifact: " + str(relative)); continue
         if not path.is_file():
             continue
-        if path.name.startswith((".env", "config.local.", "notes.local.", "output.local.")) or path.suffix in {".key", ".pem", ".p12", ".db", ".sqlite", ".sqlite3"}:
+        if path.name.startswith((".env", "config.local.", "notes.local.", "output.local.")) or path.suffix in {".key", ".pem", ".p12", ".pfx", ".db", ".sqlite", ".sqlite3", ".log", ".bak"}:
             errors.append("Credential or database file: " + str(relative)); continue
         if path.stat().st_size > 2_000_000:
             errors.append("Unexpectedly large file: " + str(relative)); continue

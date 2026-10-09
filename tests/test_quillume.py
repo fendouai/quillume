@@ -144,8 +144,11 @@ class PublicationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder) / 'quillume'
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('__pycache__', '.git'))
-            (root / 'accidental.txt').write_text('sk-' + 'A' * 32)
-            self.assertTrue(any('Credential-shaped content' in error for error in validation.validate(root)))
+            for credential in ['sk-' + 'A' * 32, 'ghp_' + 'A' * 36,
+                               'github_pat_' + 'A' * 40, 'AKIA' + 'A' * 16]:
+                with self.subTest(provider=credential[:4]):
+                    (root / 'accidental.txt').write_text(credential)
+                    self.assertTrue(any('Credential-shaped content' in error for error in validation.validate(root)))
             (root / 'accidental.txt').unlink()
             (root / '.deploy').mkdir(); (root / '.deploy/server.env').write_text('private configuration')
             self.assertTrue(any('Private/runtime artifact' in error for error in validation.validate(root)))
